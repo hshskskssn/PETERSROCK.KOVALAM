@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peter's Rock Homestay, Kovalam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f8fefe;
+      color: #003737;
+      line-height: 1.6;
+    }
+    header {
+      background: #004f4f;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 800px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .slides {
+      display: flex;
+      height: 100%;
+      animation: slide 30s infinite ease-in-out;
+    }
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #000;
+    }
+    @keyframes slide {
+      0%, 16.66% { transform: translateX(0%); }
+      22.22%, 38.88% { transform: translateX(-100%); }
+      44.44%, 61.1% { transform: translateX(-200%); }
+      66.66%, 83.33% { transform: translateX(-100%); }
+      88.88%, 100% { transform: translateX(0%); }
+    }
+    .gallery-grid, .tourist-places {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery-grid img, .place img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .place {
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.2s;
+      background: white; /* removed bluish bg */
+    }
+    .place:hover {
+      transform: scale(1.03);
+    }
+    .book-now {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .book-now a {
+      display: inline-block;
+      background: #004f4f;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 15px;
+      transition: background 0.3s;
+    }
+    .book-now a:hover {
+      background: #003232;
+    }
+    .info-box {
+      display: none;
+      background: #e0ffff;
+      padding: 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+    .comments-section {
+      background: #f0ffff;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .comments-section h2 {
+      margin-bottom: 20px;
+    }
+    #comment-list {
+      margin-top: 20px;
+    }
+    .comment {
+      background: #d9fafa;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      position: relative;
+    }
+    .comment strong {
+      color: #005959;
+    }
+    .delete-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background: #ff5e5e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+    }
+    button {
+      background: #004f4f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #003737;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .slideshow {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Peter's Rock Homestay - Kovalam</h1>
+    <p>Relax near the beach with comfort and hospitality</p>
+  </header>
+
+  <section>
+    <h2>Where You'll Be Staying</h2>
+    <div class="slideshow">
+      <div class="slides">
+        <img src="stay.jpg" alt="Main Homestay View 1">
+        <img src="stay1.jpg" alt="Main Homestay View 2">
+        <img src="stay2.jpg" alt="Main Homestay View 3">
+      </div>
+    </div>
+    <div style="padding: 15px 20px; font-size: 17px; line-height: 1.6; text-align: justify;">
+      <strong>Peter's Rock Homestay</strong> is located in Kovalam, just 13 km from Thiruvananthapuram Central Railway Station and 2 km from Lighthouse Beach. It offers free internet and has 8 rooms in a 2-storey building with car parking. Each room includes a balcony, wardrobe, and welcome items.<br><br>
+      Guests can enjoy room service, medical assistance, a garden area, and 24-hour front desk support.<br><br>
+      <strong>Nearby Access:</strong><br>
+      • Kovalam Junction Bus Stop – 500 m<br>
+      • Trivandrum International Airport – 14 km<br>
+      • Lighthouse Beach – 2 km<br>
+      • Thiruvananthapuram Central Railway Station – 13 km
+    </div>
+
+    <h2>Room & Facilities</h2>
+    <div class="gallery-grid">
+      <img src="rooms1.jpg" alt="Room View">
+      <img src="rooms2.jpg" alt="Second Room View">
+      <img src="bath.jpg" alt="Bathroom View">
+      <img src="balcony1.jpg" alt="Balcony View">
+    </div>
+
+    <h2>Beach Photos</h2>
+    <div class="gallery-grid">
+      <img src="lighth.jpeg" alt="Kovalam Beach 1">
+      <img src="vizhi.jpeg" alt="Kovalam Beach 2">
+      <img src="boatk.jpeg" alt="Kovalam Beach 3">
+    </div>
+  </section>
+
+  <section>
+    <h2>Top Tourist Places in Trivandrum</h2>
+    <div class="tourist-places">
+      <div class="place" onclick="toggleInfo('info1')">
+        <img src="kov.jpg" alt="Kovalam Beach">
+        <h3>Kovalam Beach</h3>
+        <div class="info-box" id="info1">
+          Kovalam is a famous beach town known for its three nearby crescent-shaped beaches: Lighthouse Beach, Hawah Beach, and Samudra Beach. It’s a popular place for tourists because of its calm waters, great for swimming, and many fun activities to enjoy.
+        </div>
+      </div>
+      <div class="place" onclick="toggleInfo('info2')">
+        <img src="padma.jpg" alt="Padmanabhaswamy Temple">
+        <h3>Padmanabhaswamy Temple</h3>
+        <div class="info-box" id="info2">
+          
+ Padmanabhaswamy Temple – A famous Hindu temple known for its beautiful architecture and rich history.
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book-now">
+    <h2>Book Your Stay</h2>
+    <p><a href="tel:+919847509437">Call: Joby Jacob</a></p>
+    <p><a href="mailto:jjkovalam@gmail.com">Email: jjkovalam@gmail.com</a></p>
+    <p><a href="https://wa.me/919847509437" target="_blank">Chat on WhatsApp: +91 9847509437</a></p>
+  </section>
+
+  <section>
+    <h2>Find Us on Google Maps</h2>
+    <p>Location : <a href="https://maps.app.goo.gl/wjp9wt9A8hkV1v27A" target="_blank">Peter's Rock  Homestay Kovalam</a>.</p>
+  </section>
+
+  <section class="comments-section">
+    <h2>Visitor Comments & Feedback</h2>
+    <input type="text" id="name" placeholder="Your name" required>
+    <textarea id="comment" rows="4" placeholder="Your feedback..."></textarea>
+    <button onclick="addComment()">Post Comment</button>
+    <div id="comment-list"></div>
+  </section>
+
+  <script>
+    function toggleInfo(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function addComment() {
+      const name = document.getElementById('name').value.trim();
+      const comment = document.getElementById('comment').value.trim();
+      if (!name || !comment) {
+        alert("Please enter both your name and comment.");
+        return;
+      }
+      const commentList = document.getElementById('comment-list');
+      const commentBox = document.createElement('div');
+      commentBox.className = 'comment';
+
+      const nameElem = document.createElement('strong');
+      nameElem.textContent = name;
+
+      const textElem = document.createElement('p');
+      textElem.textContent = comment;
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.className = 'delete-btn';
+      deleteBtn.textContent = 'Delete';
+      deleteBtn.onclick = function() {
+        commentBox.remove();
+      };
+
+      commentBox.appendChild(nameElem);
+      commentBox.appendChild(textElem);
+      commentBox.appendChild(deleteBtn);
+      commentList.appendChild(commentBox);
+
+      document.getElementById('name').value = '';
+      document.getElementById('comment').value = '';
+    }
+  </script>
+</body>
+</html>
